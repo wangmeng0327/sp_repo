@@ -9,15 +9,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-#zuul api网关配置，下面的几行配置可以注释掉，效果不变
+#zuul api缃戝叧閰嶇疆锛屼笅闈㈢殑鍑犺閰嶇疆鍙互娉ㄩ噴鎺夛紝鏁堟灉涓嶅彉
 zuul:
   routes:
     item-service: /item-service/**
     user-service: /user-service/**
     order-service: /order-service/**
-  retryable: true #开启重试
+  retryable: true #寮�鍚噸璇�
 
-#zuul集成了ribbon，相关配置
+#zuul闆嗘垚浜唕ibbon锛岀浉鍏抽厤缃�
 ribbon:
   ConnectTimeout: 1000
   ReadTimeout: 1000
@@ -32,12 +32,14 @@ hystrix:
           thread:
             timeoutInMilliseconds: 500
 
-#暴露监控端点
+#鏆撮湶鐩戞帶绔偣
 management:
   endpoints:
     web:
       exposure:
         include: hystrix.stream
+
+
 
     
 

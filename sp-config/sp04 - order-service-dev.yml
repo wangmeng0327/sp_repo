@@ -1,4 +1,4 @@
-#应用名称
+#搴旂敤鍚嶇О
 spring:
   application:
     name: order-service
@@ -6,23 +6,23 @@ spring:
   # server:
   #  port: 8201
 
-#eureka客户端配置
+#eureka瀹㈡埛绔厤缃�
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-#启用hystrix   
+#鍚敤hystrix   
 feign:
   hystrix:
     enabled: true
-# 暴露端点   
+# 鏆撮湶绔偣   
 management:
   endpoints:
     web:
       exposure:
         include: hystrix.stream
 
-#order两台服务器配置信息      
+#order涓ゅ彴鏈嶅姟鍣ㄩ厤缃俊鎭�      
 ---
 spring:
   profiles: order1
@@ -36,3 +36,7 @@ spring:
 
 server:
   port: 8202
+
+  
+  
+  
