@@ -7,6 +7,8 @@ spring:
         service-id: config-server  #服务id
       name: user-service
       profile: dev
+      
+      
 #eureka客户端    
 eureka:
   client:
