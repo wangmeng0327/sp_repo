@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
 	private static final Logger log = LoggerFactory.getLogger(JsonUtil.class);
 	/**
 	 * yml配置的用户数据，json字符串注入到
+	 * 动态刷新时，可以更新配置数据
 	 */
 	@Value("${sp.user-service.users}")
 	private String userJson;
